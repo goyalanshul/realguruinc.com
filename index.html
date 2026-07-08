@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="luxury">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,13 +15,16 @@
   <meta property="og:description" content="Plots &amp; commercial spaces in Ludhiana and New Chandigarh. Authorized Omaxe dealer. 5,000+ families helped since 2010.">
   <meta property="og:url" content="https://realguruinc.com/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://realguruinc.com/assets/projects/royal-nest.jpg">
+  <meta property="og:image" content="https://realguruinc.com/assets/projects/omaxe-chowk.jpg">
 
-  <!-- FONTS + CSS -->
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- TAILWIND CSS + DAISYUI (CDN, zero build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
@@ -50,77 +53,77 @@
   </script>
 </head>
 
-<body>
+<body class="bg-base-100 text-base-content">
 
 <!-- ═══ NAVBAR ═══════════════════════════════════════════════════════════ -->
-<nav class="navbar navbar-expand-lg bg-white sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="#hero">
-      <img src="assets/logo-real-guru.png" alt="Real Guru Inc" class="rg-logo">
+<div class="navbar bg-neutral text-neutral-content sticky top-0 z-40 px-4 md:px-8 shadow-lg shadow-black/30">
+  <div class="navbar-start">
+    <a href="#hero" class="brand-wordmark text-2xl md:text-3xl text-primary">REAL GURU</a>
+  </div>
+  <div class="navbar-end gap-2">
+    <ul class="menu menu-horizontal hidden lg:flex px-1 gap-1 text-sm font-medium">
+      <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+      <li><a href="#about" class="hover:text-primary">About Us</a></li>
+      <li><a href="#services" class="hover:text-primary">Services</a></li>
+      <li><a href="#faq" class="hover:text-primary">FAQ</a></li>
+    </ul>
+    <a href="https://wa.me/917082910021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
+       target="_blank" rel="noopener"
+       class="btn btn-sm md:btn-md bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full">
+      <i class="fa-brands fa-whatsapp"></i> <span class="hidden sm:inline">Talk to Us</span>
     </a>
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        <li class="nav-item ms-lg-2">
-          <a class="btn btn-wa px-4"
-             href="https://wa.me/917082910021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
-             target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp me-1"></i> Talk to Us
-          </a>
-        </li>
+    <div class="dropdown dropdown-end lg:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square text-neutral-content">
+        <i class="fa-solid fa-bars text-lg"></i>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-xl bg-neutral text-neutral-content rounded-box w-44">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
   </div>
-</nav>
+</div>
 
 <!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
-<section id="hero" class="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="hero-badge mb-3">
-          <i class="fa-solid fa-certificate me-1"></i>
-          Authorized Omaxe Dealer &middot; Est. 2010
+<section id="hero" class="hero-luxury-bg text-neutral-content">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-20 md:py-28">
+    <div class="max-w-2xl">
+      <span class="badge badge-outline border-primary text-primary gap-2 py-3 px-4">
+        <i class="fa-solid fa-certificate"></i> Authorized Omaxe Dealer &middot; Est. 2010
+      </span>
+      <h1 class="font-display font-bold text-4xl md:text-6xl leading-tight mt-5">
+        Buy Omaxe Property<br>
+        <span class="text-primary">Through People You Can Trust</span>
+      </h1>
+      <p class="mt-5 text-base md:text-lg text-neutral-content/80 max-w-xl">
+        We are Real Guru Inc &mdash; an authorized dealer for Omaxe Ltd.
+        We help families and investors buy the right plot or shop in
+        Ludhiana and New Chandigarh. Simple advice. No pressure.
+      </p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="https://wa.me/917082910021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
+           target="_blank" rel="noopener"
+           class="btn btn-lg bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <a href="#projects" class="btn btn-lg btn-outline text-neutral-content border-neutral-content/40 hover:bg-neutral-content/10 hover:border-neutral-content rounded-full">
+          See All Projects
+        </a>
+      </div>
+      <div class="stats stats-vertical sm:stats-horizontal bg-transparent mt-10 gap-6 sm:gap-0">
+        <div class="stat px-0 sm:px-6">
+          <div class="stat-value text-primary text-3xl">5,000+</div>
+          <div class="stat-title text-neutral-content/70">Families Helped</div>
         </div>
-        <h1 class="hero-title">
-          Buy Omaxe Property<br>
-          <span class="text-accent">Through People You Can Trust</span>
-        </h1>
-        <p class="hero-sub mt-3">
-          We are Real Guru Inc &mdash; an authorized dealer for Omaxe Ltd.
-          We help families and investors buy the right plot or shop in
-          Ludhiana and New Chandigarh. Simple advice. No pressure.
-        </p>
-        <div class="d-flex flex-wrap gap-3 mt-4">
-          <a href="https://wa.me/917082910021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
-             class="btn btn-wa btn-lg" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp me-2"></i>Chat on WhatsApp
-          </a>
-          <a href="#projects" class="btn btn-outline-light btn-lg rounded-pill">
-            See All Projects
-          </a>
+        <div class="stat px-0 sm:px-6">
+          <div class="stat-value text-primary text-3xl">15+</div>
+          <div class="stat-title text-neutral-content/70">Years in Business</div>
         </div>
-        <div class="hero-stats mt-4">
-          <div class="hero-stat">
-            <span class="stat-num">5,000+</span>
-            <span class="stat-label">Families Helped</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">15+</span>
-            <span class="stat-label">Years in Business</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-num">5.0&#9733;</span>
-            <span class="stat-label">Justdial Rating</span>
-          </div>
+        <div class="stat px-0 sm:px-6">
+          <div class="stat-value text-primary text-3xl">5.0&#9733;</div>
+          <div class="stat-title text-neutral-content/70">Justdial Rating</div>
         </div>
       </div>
     </div>
@@ -128,234 +131,153 @@
 </section>
 
 <!-- ═══ PROJECTS ══════════════════════════════════════════════════════════ -->
-<section id="projects" class="projects-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-label">Current Omaxe Projects</span>
-      <h2 class="section-title">Properties Available Right Now</h2>
-      <p class="section-sub mx-auto">
-        We are the authorized dealer for these three Omaxe projects.
-        All are RERA registered &mdash; your money is fully protected.
-        Call us and we will explain everything in plain language.
+<section id="projects" class="bg-[#FAF8F4] text-slate-800 py-20 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-14 max-w-2xl mx-auto">
+      <span class="font-semibold tracking-widest text-xs uppercase" style="color:var(--rg-gold)">Current Omaxe Projects</span>
+      <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 text-slate-900">Properties Available Right Now</h2>
+      <p class="mt-4 text-slate-600">
+        We are the authorized dealer for these four Omaxe projects.
+        All RERA-registered projects are fully protected by law &mdash;
+        call us and we will explain everything in plain language.
       </p>
     </div>
 
-    <div class="row g-4">
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
       <!-- PROJECT 1: ROYAL NEST -->
-      <div class="col-sm-6 col-xl-3 d-flex">
-        <article class="brochure-card w-100">
-          <div class="brochure-img-wrap">
-            <img src="assets/projects/royal-nest.jpg"
-                 alt="Omaxe Royal Nest — Premium Plotted Township on Pakhowal Road, Ludhiana"
-                 class="brochure-img">
-            <span class="project-type-badge">Residential Plots</span>
+      <article class="group card bg-base-100 text-neutral-content shadow-xl border border-white/10 overflow-hidden">
+        <div class="relative h-48 bg-neutral flex items-center justify-center text-center px-4">
+          <div style="color:var(--rg-gold)">
+            <i class="fa-solid fa-tree-city text-4xl"></i>
+            <p class="font-display text-neutral-content mt-2 text-sm">Photos coming soon</p>
           </div>
-          <div class="brochure-body">
-            <h3 class="project-name">Omaxe Royal Nest</h3>
-            <p class="project-loc">
-              <i class="fa-solid fa-location-dot me-1"></i>Pakhowal Road Thakkarwal, Ludhiana
-            </p>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fa-solid fa-ruler-combined"></i>
-                <span>Plots up to <strong>300 sq. yards</strong></span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Secure gated community</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-tree"></i>
-                <span>Green theme parks &amp; wide internal roads</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span class="rera-text">RERA: PBRERA-LDH44-PR1370-042026</span>
-              </div>
-            </div>
-            <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20Royal%20Nest%20plots%20on%20Pakhowal%20Road%2C%20Ludhiana.%20Please%20share%20the%20price%20list."
-               class="btn btn-wa w-100 mt-3" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp me-2"></i>Get Price List on WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
+          <span class="badge badge-primary absolute top-3 left-3 font-semibold">Residential Plots</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title font-display text-lg">Omaxe Royal Nest</h3>
+          <p class="text-sm text-neutral-content/60"><i class="fa-solid fa-location-dot mr-1"></i>Pakhowal Road Thakkarwal, Ludhiana</p>
+          <ul class="text-sm space-y-1.5 mt-2 text-neutral-content/80">
+            <li><i class="fa-solid fa-ruler-combined w-4" style="color:var(--rg-gold)"></i> Plots up to <strong>300 sq. yards</strong></li>
+            <li><i class="fa-solid fa-shield-halved w-4" style="color:var(--rg-gold)"></i> Secure gated community</li>
+            <li><i class="fa-solid fa-tree w-4" style="color:var(--rg-gold)"></i> Green theme parks &amp; wide roads</li>
+            <li><i class="fa-solid fa-circle-check w-4" style="color:var(--rg-gold)"></i> <span class="text-xs">RERA: PBRERA-LDH44-PR1370-042026</span></li>
+          </ul>
+          <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20Royal%20Nest%20plots%20on%20Pakhowal%20Road%2C%20Ludhiana.%20Please%20share%20the%20price%20list."
+             target="_blank" rel="noopener"
+             class="btn btn-sm bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full mt-3 w-full">
+            <i class="fa-brands fa-whatsapp"></i> Get Price List
+          </a>
+        </div>
+      </article>
 
       <!-- PROJECT 2: WORLD STREET WEST ZONE -->
-      <div class="col-sm-6 col-xl-3 d-flex">
-        <article class="brochure-card w-100">
-          <div class="brochure-img-wrap">
-            <img src="assets/projects/world-street.jpg"
-                 alt="Omaxe World Street West Zone — Commercial SCO on Airport Road, New Chandigarh"
-                 class="brochure-img">
-            <span class="project-type-badge commercial">Commercial SCO</span>
-          </div>
-          <div class="brochure-body">
-            <h3 class="project-name">Omaxe World Street &mdash; West Zone</h3>
-            <p class="project-loc">
-              <i class="fa-solid fa-location-dot me-1"></i>Airport Road, Sector 6, New Chandigarh
-            </p>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fa-solid fa-store"></i>
-                <span>G+3 Shop-Cum-Offices (SCO) &amp; retail shops</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-road"></i>
-                <span>Airport Road frontage &middot; 24-m car-free boulevard</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-hospital"></i>
-                <span>Built-in catchment: Medicity &amp; Education City nearby</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-location-pin"></i>
-                <span>PGI 12 min &middot; Panjab University 13 min &middot; Airport 45 min</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span class="rera-text">RERA: PBRERA-SAS80-PC0370</span>
-              </div>
-            </div>
-            <div class="price-tag">Starting &#8377;1.42 Cr*</div>
-            <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20World%20Street%20West%20Zone%20in%20New%20Chandigarh.%20Please%20share%20details%20and%20price%20list."
-               class="btn btn-wa w-100 mt-2" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp me-2"></i>Get Details on WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
+      <article class="group card bg-base-100 text-neutral-content shadow-xl border border-white/10 overflow-hidden">
+        <div class="relative h-48 overflow-hidden">
+          <img src="assets/projects/world-street.jpg" alt="Omaxe World Street West Zone — Commercial SCO on Airport Road, New Chandigarh" class="card-img-zoom w-full h-full object-cover">
+          <span class="badge badge-info absolute top-3 left-3 font-semibold text-white">Commercial SCO</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title font-display text-lg">Omaxe World Street &mdash; West Zone</h3>
+          <p class="text-sm text-neutral-content/60"><i class="fa-solid fa-location-dot mr-1"></i>Airport Road, Sector 6, New Chandigarh</p>
+          <ul class="text-sm space-y-1.5 mt-2 text-neutral-content/80">
+            <li><i class="fa-solid fa-store w-4" style="color:var(--rg-gold)"></i> G+3 Shop-Cum-Offices &amp; retail</li>
+            <li><i class="fa-solid fa-road w-4" style="color:var(--rg-gold)"></i> Airport Road &middot; car-free boulevard</li>
+            <li><i class="fa-solid fa-location-pin w-4" style="color:var(--rg-gold)"></i> PGI 12 min &middot; Airport 45 min</li>
+            <li><i class="fa-solid fa-circle-check w-4" style="color:var(--rg-gold)"></i> <span class="text-xs">RERA: PBRERA-SAS80-PC0370</span></li>
+          </ul>
+          <div class="font-semibold mt-2" style="color:var(--rg-gold)">Starting &#8377;1.42 Cr*</div>
+          <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20World%20Street%20West%20Zone%20in%20New%20Chandigarh.%20Please%20share%20details%20and%20price%20list."
+             target="_blank" rel="noopener"
+             class="btn btn-sm bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full mt-3 w-full">
+            <i class="fa-brands fa-whatsapp"></i> Get Details
+          </a>
+        </div>
+      </article>
 
-      <!-- PROJECT 3: OMAXE CHOWK -->
-      <div class="col-sm-6 col-xl-3 d-flex">
-        <article class="brochure-card w-100">
-          <div class="brochure-img-wrap">
-            <div id="chowkGallery" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/projects/omaxe-chowk.jpg"
-                       alt="Omaxe Chowk — night view of the domed heritage-bazaar facade, Ghumar Mandi, Ludhiana"
-                       class="brochure-img">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/projects/omaxe-chowk/gallery_1.jpg"
-                       alt="Omaxe Chowk — central plaza and fountain court, Ludhiana"
-                       class="brochure-img">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/projects/omaxe-chowk/gallery_2.jpg"
-                       alt="Omaxe Chowk — street-facing retail frontage at dusk, Ludhiana"
-                       class="brochure-img">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/projects/omaxe-chowk/gallery_3.jpg"
-                       alt="Omaxe Chowk — Dawatpur food court dining hall, Ludhiana"
-                       class="brochure-img">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#chowkGallery" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#chowkGallery" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <div class="carousel-indicators rg-carousel-indicators">
-                <button type="button" data-bs-target="#chowkGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#chowkGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#chowkGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#chowkGallery" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <!-- PROJECT 3: OMAXE CHOWK (carousel) -->
+      <article class="group card bg-base-100 text-neutral-content shadow-xl border border-white/10 overflow-hidden">
+        <div class="relative h-48">
+          <div class="carousel w-full h-full min-w-0">
+            <div id="chowk-slide1" class="carousel-item relative w-full h-full min-w-0">
+              <img src="assets/projects/omaxe-chowk.jpg" alt="Omaxe Chowk — night view of the domed heritage-bazaar facade, Ludhiana" class="w-full h-full object-cover">
+              <div class="rg-carousel-nav absolute flex justify-between -translate-y-1/2 left-2 right-2 top-1/2">
+                <a href="#chowk-slide4" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10094;</a>
+                <a href="#chowk-slide2" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10095;</a>
               </div>
             </div>
-            <span class="project-type-badge investment">High-Return Investment</span>
-          </div>
-          <div class="brochure-body">
-            <h3 class="project-name">Omaxe Chowk</h3>
-            <p class="project-loc">
-              <i class="fa-solid fa-location-dot me-1"></i>Fountain Chowk, Ghumar Mandi, Ludhiana
-            </p>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                <span>HopUp entertainment units from <strong>&#8377;92 Lakh</strong></span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-percent"></i>
-                <span>12% loyalty return till fitout, then lease rental*</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-street-view"></i>
-                <span>631-ft frontage on Rani Jhansi Road &middot; 50,000+ weekend footfall</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-utensils"></i>
-                <span>Dawatpur food court &middot; 1,000+ seating &middot; 1,000+ parking</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span class="rera-text">RERA: PBRERA-LDH45-PC0396</span>
+            <div id="chowk-slide2" class="carousel-item relative w-full h-full min-w-0">
+              <img src="assets/projects/omaxe-chowk/gallery_1.jpg" alt="Omaxe Chowk — central plaza and fountain court, Ludhiana" class="w-full h-full object-cover">
+              <div class="rg-carousel-nav absolute flex justify-between -translate-y-1/2 left-2 right-2 top-1/2">
+                <a href="#chowk-slide1" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10094;</a>
+                <a href="#chowk-slide3" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10095;</a>
               </div>
             </div>
-            <div class="price-tag">From &#8377;92 Lakh &middot; Delivery June 2030</div>
-            <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20Chowk%20at%20Ghumar%20Mandi%2C%20Ludhiana.%20Please%20share%20details%20and%20price%20list."
-               class="btn btn-wa w-100 mt-2" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp me-2"></i>Get Details on WhatsApp
-            </a>
+            <div id="chowk-slide3" class="carousel-item relative w-full h-full min-w-0">
+              <img src="assets/projects/omaxe-chowk/gallery_2.jpg" alt="Omaxe Chowk — street-facing retail frontage at dusk, Ludhiana" class="w-full h-full object-cover">
+              <div class="rg-carousel-nav absolute flex justify-between -translate-y-1/2 left-2 right-2 top-1/2">
+                <a href="#chowk-slide2" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10094;</a>
+                <a href="#chowk-slide4" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10095;</a>
+              </div>
+            </div>
+            <div id="chowk-slide4" class="carousel-item relative w-full h-full min-w-0">
+              <img src="assets/projects/omaxe-chowk/gallery_3.jpg" alt="Omaxe Chowk — Dawatpur food court dining hall, Ludhiana" class="w-full h-full object-cover">
+              <div class="rg-carousel-nav absolute flex justify-between -translate-y-1/2 left-2 right-2 top-1/2">
+                <a href="#chowk-slide3" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10094;</a>
+                <a href="#chowk-slide1" class="btn btn-circle btn-xs bg-black/50 border-none text-white">&#10095;</a>
+              </div>
+            </div>
           </div>
-        </article>
-      </div>
+          <span class="badge badge-secondary absolute top-3 left-3 font-semibold text-white pointer-events-none">High-Return Investment</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title font-display text-lg">Omaxe Chowk</h3>
+          <p class="text-sm text-neutral-content/60"><i class="fa-solid fa-location-dot mr-1"></i>Fountain Chowk, Ghumar Mandi, Ludhiana</p>
+          <ul class="text-sm space-y-1.5 mt-2 text-neutral-content/80">
+            <li><i class="fa-solid fa-indian-rupee-sign w-4" style="color:var(--rg-gold)"></i> HopUp units from <strong>&#8377;92 Lakh</strong></li>
+            <li><i class="fa-solid fa-percent w-4" style="color:var(--rg-gold)"></i> 12% loyalty return till fitout*</li>
+            <li><i class="fa-solid fa-utensils w-4" style="color:var(--rg-gold)"></i> Dawatpur food court &middot; 1,000+ seats</li>
+            <li><i class="fa-solid fa-circle-check w-4" style="color:var(--rg-gold)"></i> <span class="text-xs">RERA: PBRERA-LDH45-PC0396</span></li>
+          </ul>
+          <div class="font-semibold mt-2" style="color:var(--rg-gold)">From &#8377;92 Lakh &middot; Delivery Jun 2030</div>
+          <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20Omaxe%20Chowk%20at%20Ghumar%20Mandi%2C%20Ludhiana.%20Please%20share%20details%20and%20price%20list."
+             target="_blank" rel="noopener"
+             class="btn btn-sm bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full mt-3 w-full">
+            <i class="fa-brands fa-whatsapp"></i> Get Details
+          </a>
+        </div>
+      </article>
 
       <!-- PROJECT 4: NH-152 LUXURY RESIDENCES -->
-      <div class="col-sm-6 col-xl-3 d-flex">
-        <article class="brochure-card w-100">
-          <div class="brochure-img-wrap">
-            <div class="project-img-placeholder">
-              <i class="fa-solid fa-building-columns"></i>
-              <span>Premium Residences<br>NH-152</span>
-            </div>
-            <span class="project-type-badge prelaunched">Pre-Launch</span>
+      <article class="group card bg-base-100 text-neutral-content shadow-xl border border-white/10 overflow-hidden">
+        <div class="relative h-48 bg-neutral flex items-center justify-center text-center px-4">
+          <div style="color:var(--rg-gold)">
+            <i class="fa-solid fa-building-columns text-4xl"></i>
+            <p class="font-display text-neutral-content mt-2 text-sm">Premium Residences<br>NH-152</p>
           </div>
-          <div class="brochure-body">
-            <h3 class="project-name">Premium Residences — NH-152</h3>
-            <p class="project-loc">
-              <i class="fa-solid fa-location-dot me-1"></i>Ambala-Chandigarh Expressway (NH-152)
-            </p>
-            <div class="project-highlights">
-              <div class="highlight-item">
-                <i class="fa-solid fa-building"></i>
-                <span>S+14 high-rise &middot; Mivan construction</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-couch"></i>
-                <span>3 BHK 1,800 sq ft &middot; Book for &#8377;11 Lakh</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-star"></i>
-                <span>4 BHK 2,300 sq ft &middot; Book for &#8377;15 Lakh</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-hospital"></i>
-                <span>Adjacent to MM Hospital &amp; MM International School</span>
-              </div>
-              <div class="highlight-item">
-                <i class="fa-solid fa-school"></i>
-                <span>Opposite Don Bosco School &amp; Omaxe Greens</span>
-              </div>
-            </div>
-            <div class="price-tag prelaunched-tag">Pre-launch pricing &middot; Limited units</div>
-            <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20the%20premium%20residential%20launch%20on%20NH-152%2C%20Ambala-Chandigarh%20Expressway.%20Please%20share%20details%20on%203%20BHK%20and%204%20BHK%20apartments."
-               class="btn btn-wa w-100 mt-2" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp me-2"></i>Get Details on WhatsApp
-            </a>
-          </div>
-        </article>
-      </div>
+          <span class="badge badge-warning absolute top-3 left-3 font-semibold">Pre-Launch</span>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title font-display text-lg">Premium Residences — NH-152</h3>
+          <p class="text-sm text-neutral-content/60"><i class="fa-solid fa-location-dot mr-1"></i>Ambala-Chandigarh Expressway</p>
+          <ul class="text-sm space-y-1.5 mt-2 text-neutral-content/80">
+            <li><i class="fa-solid fa-building w-4" style="color:var(--rg-gold)"></i> S+14 high-rise &middot; Mivan construction</li>
+            <li><i class="fa-solid fa-couch w-4" style="color:var(--rg-gold)"></i> 3 BHK 1,800 sq ft &middot; &#8377;11 Lakh</li>
+            <li><i class="fa-solid fa-star w-4" style="color:var(--rg-gold)"></i> 4 BHK 2,300 sq ft &middot; &#8377;15 Lakh</li>
+            <li><i class="fa-solid fa-hospital w-4" style="color:var(--rg-gold)"></i> Adjacent MM Hospital &amp; School</li>
+          </ul>
+          <div class="font-semibold mt-2" style="color:var(--rg-gold)">Pre-launch pricing &middot; Limited units</div>
+          <a href="https://wa.me/917082910021?text=Hi%2C%20I%20am%20interested%20in%20the%20premium%20residential%20launch%20on%20NH-152%2C%20Ambala-Chandigarh%20Expressway.%20Please%20share%20details%20on%203%20BHK%20and%204%20BHK%20apartments."
+             target="_blank" rel="noopener"
+             class="btn btn-sm bg-[#25D366] hover:bg-[#1ebe5d] border-none text-white rounded-full mt-3 w-full">
+            <i class="fa-brands fa-whatsapp"></i> Get Details
+          </a>
+        </div>
+      </article>
 
-    </div><!-- /row -->
+    </div><!-- /grid -->
 
-    <p class="disclaimer text-center mt-4 mb-0">
+    <p class="text-center text-xs text-slate-500 max-w-2xl mx-auto mt-10">
       * Prices are indicative and subject to change. RERA registration ensures full buyer protection
       under Punjab Real Estate Regulatory Authority. The NH-152 project is at pre-launch stage — RERA registration
       in progress. For current price lists and availability, please call or WhatsApp us.
@@ -364,94 +286,73 @@
 </section>
 
 <!-- ═══ TRUST STRIP ════════════════════════════════════════════════════════ -->
-<section class="trust-section" aria-label="Why choose Real Guru Inc">
-  <div class="container">
-    <div class="row g-4 text-center">
-      <div class="col-6 col-md-3">
-        <div class="trust-item">
-          <div class="trust-num">5,000+</div>
-          <div class="trust-label">Families &amp; Investors Served</div>
-        </div>
+<section class="bg-neutral text-neutral-content py-14" aria-label="Why choose Real Guru Inc">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="stats stats-vertical sm:stats-horizontal bg-transparent w-full text-center">
+      <div class="stat">
+        <div class="stat-value text-primary">5,000+</div>
+        <div class="stat-title text-neutral-content/70">Families &amp; Investors Served</div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-item">
-          <div class="trust-num">15+</div>
-          <div class="trust-label">Years in Real Estate</div>
-        </div>
+      <div class="stat">
+        <div class="stat-value text-primary">15+</div>
+        <div class="stat-title text-neutral-content/70">Years in Real Estate</div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-item">
-          <div class="trust-num">5.0&#9733;</div>
-          <div class="trust-label">Justdial Rating</div>
-        </div>
+      <div class="stat">
+        <div class="stat-value text-primary">5.0&#9733;</div>
+        <div class="stat-title text-neutral-content/70">Justdial Rating</div>
       </div>
-      <div class="col-6 col-md-3">
-        <div class="trust-item">
-          <div class="trust-num">RERA</div>
-          <div class="trust-label">All Projects Registered</div>
-        </div>
+      <div class="stat">
+        <div class="stat-value text-primary">RERA</div>
+        <div class="stat-title text-neutral-content/70">All Projects Registered</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ ABOUT ════════════════════════════════════════════════════════════ -->
-<section id="about" class="about-section">
-  <div class="container">
-    <div class="row align-items-center gy-5">
-      <div class="col-lg-6">
-        <span class="section-label">Who We Are</span>
-        <h2 class="section-title">15 Years. 5,000+ Families.<br>One Trusted Name.</h2>
-        <p class="mt-3">
+<section id="about" class="bg-white text-slate-800 py-20 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="font-semibold tracking-widest text-xs uppercase" style="color:var(--rg-gold)">Who We Are</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 text-slate-900">15 Years. 5,000+ Families.<br>One Trusted Name.</h2>
+        <p class="mt-4 text-slate-600">
           Real Guru Inc started in 2010 with one simple idea &mdash; help families buy the right property
           without confusion, hidden charges, or wasted time. Today, we are the authorized dealer for
           Omaxe Ltd in North India, with our office at Omaxe Greens, Ambala.
         </p>
-        <p>
+        <p class="mt-3 text-slate-600">
           We are not a listing website. We are your personal guide &mdash; from the first call to
-          the day you get your keys. Our MD, <strong>Mr. Mahesh Goyal</strong>, leads every deal personally.
+          the day you get your keys. Our MD, <strong class="text-slate-900">Mr. Mahesh Goyal</strong>, leads every deal personally.
         </p>
-        <ul class="about-list mt-3">
-          <li>
-            <i class="fa-solid fa-check"></i>
-            Authorized Omaxe Dealer &mdash; we work directly with Omaxe, not through middlemen
-          </li>
-          <li>
-            <i class="fa-solid fa-check"></i>
-            All projects are RERA registered &mdash; your investment is fully protected by law
-          </li>
-          <li>
-            <i class="fa-solid fa-check"></i>
-            We help you get an HDFC or bank home loan &mdash; we are an HDFC-approved associate
-          </li>
-          <li>
-            <i class="fa-solid fa-check"></i>
-            NRI friendly &mdash; we handle everything if you are buying from outside India
-          </li>
+        <ul class="mt-5 space-y-2.5 text-sm text-slate-700">
+          <li class="flex gap-2"><i class="fa-solid fa-check mt-1" style="color:var(--rg-gold)"></i> Authorized Omaxe Dealer &mdash; we work directly with Omaxe, not through middlemen</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check mt-1" style="color:var(--rg-gold)"></i> All projects are RERA registered &mdash; your investment is fully protected by law</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check mt-1" style="color:var(--rg-gold)"></i> We help you get an HDFC or bank home loan &mdash; an HDFC-approved associate</li>
+          <li class="flex gap-2"><i class="fa-solid fa-check mt-1" style="color:var(--rg-gold)"></i> NRI friendly &mdash; we handle everything if you are buying from outside India</li>
         </ul>
       </div>
-      <div class="col-lg-5 offset-lg-1">
-        <div class="row g-3">
-          <div class="col-6">
-            <div class="about-card text-center">
-              <div class="about-card-label">Est.</div>
-              <div class="about-card-num">2010</div>
-              <div class="about-card-sub">In Business</div>
-            </div>
+
+      <div class="flex flex-col items-center">
+        <div class="portrait-frame w-full max-w-sm shadow-2xl">
+          <img src="assets/mahesh-goyal.jpg" alt="Mr. Mahesh Goyal, Founder &amp; CMD, Real Guru Inc" class="w-full h-auto object-cover">
+        </div>
+        <div class="text-center mt-4">
+          <p class="font-display text-lg text-slate-900">Mahesh Goyal</p>
+          <p class="text-xs uppercase tracking-widest" style="color:var(--rg-gold)">Founder &amp; CMD, Real Guru Inc</p>
+        </div>
+        <div class="grid grid-cols-3 gap-3 w-full max-w-sm mt-6">
+          <div class="rounded-xl bg-neutral text-center py-3">
+            <div class="font-display text-xl" style="color:var(--rg-gold)">2010</div>
+            <div class="text-[11px] text-neutral-content/60 uppercase tracking-wide">Est.</div>
           </div>
-          <div class="col-6">
-            <div class="about-card text-center">
-              <div class="about-card-label">Rated</div>
-              <div class="about-card-num">5.0&#9733;</div>
-              <div class="about-card-sub">on Justdial</div>
-            </div>
+          <div class="rounded-xl bg-neutral text-center py-3">
+            <div class="font-display text-xl" style="color:var(--rg-gold)">5.0&#9733;</div>
+            <div class="text-[11px] text-neutral-content/60 uppercase tracking-wide">Justdial</div>
           </div>
-          <div class="col-12">
-            <div class="about-card about-omaxe text-center">
-              <div class="omaxe-wordmark">OMAXE</div>
-              <div class="omaxe-sub">Authorized Dealer</div>
-              <div class="gstin-line">GSTIN: 06AFHPG6040C2ZZ</div>
-            </div>
+          <div class="rounded-xl bg-neutral text-neutral-content text-center py-3">
+            <div class="brand-wordmark text-sm" style="color:var(--rg-gold)">OMAXE</div>
+            <div class="text-[9px] text-neutral-content/60 uppercase tracking-wide">Auth. Dealer</div>
           </div>
         </div>
       </div>
@@ -460,172 +361,89 @@
 </section>
 
 <!-- ═══ SERVICES ═════════════════════════════════════════════════════════ -->
-<section id="services" class="services-section">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="section-label">What We Do</span>
-      <h2 class="section-title">How We Help You</h2>
-      <p class="section-sub mx-auto">
+<section id="services" class="bg-[#FAF8F4] text-slate-800 py-20 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-14 max-w-2xl mx-auto">
+      <span class="font-semibold tracking-widest text-xs uppercase" style="color:var(--rg-gold)">What We Do</span>
+      <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 text-slate-900">How We Help You</h2>
+      <p class="mt-4 text-slate-600">
         Buying property is one of the biggest decisions of your life. We make it easier &mdash; step by step.
       </p>
     </div>
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="service-card h-100">
-          <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
-          <h5>Buy a Home or Plot</h5>
-          <p>
-            We show you only properties that match your actual need &mdash; right size, right location,
-            right budget. No pressure, no time wasted.
-          </p>
-        </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card bg-white shadow-sm border border-slate-200 p-6">
+        <div class="text-3xl mb-3" style="color:var(--rg-gold)"><i class="fa-solid fa-house-chimney"></i></div>
+        <h5 class="font-display font-semibold text-lg text-slate-900">Buy a Home or Plot</h5>
+        <p class="text-sm text-slate-600 mt-2">We show you only properties that match your actual need &mdash; right size, right location, right budget.</p>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="service-card h-100">
-          <div class="service-icon"><i class="fa-solid fa-shop"></i></div>
-          <h5>Commercial Investment</h5>
-          <p>
-            Looking for rental income from a shop or office? We explain the numbers clearly &mdash;
-            expected returns, lease terms, and what to watch out for.
-          </p>
-        </div>
+      <div class="card bg-white shadow-sm border border-slate-200 p-6">
+        <div class="text-3xl mb-3" style="color:var(--rg-gold)"><i class="fa-solid fa-shop"></i></div>
+        <h5 class="font-display font-semibold text-lg text-slate-900">Commercial Investment</h5>
+        <p class="text-sm text-slate-600 mt-2">Looking for rental income? We explain the numbers clearly &mdash; expected returns, lease terms, and what to watch for.</p>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="service-card h-100">
-          <div class="service-icon"><i class="fa-solid fa-file-signature"></i></div>
-          <h5>Loans &amp; Paperwork</h5>
-          <p>
-            We coordinate with HDFC and other banks for your home loan. We also make sure all
-            your documents are in order from day one.
-          </p>
-        </div>
+      <div class="card bg-white shadow-sm border border-slate-200 p-6">
+        <div class="text-3xl mb-3" style="color:var(--rg-gold)"><i class="fa-solid fa-file-signature"></i></div>
+        <h5 class="font-display font-semibold text-lg text-slate-900">Loans &amp; Paperwork</h5>
+        <p class="text-sm text-slate-600 mt-2">We coordinate with HDFC and other banks for your home loan and keep your documents in order from day one.</p>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="service-card h-100">
-          <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
-          <h5>NRI Property Buying</h5>
-          <p>
-            Living outside India? We handle everything &mdash; virtual tour, documents,
-            builder follow-up &mdash; right up to possession. No need to fly in just to book.
-          </p>
-        </div>
+      <div class="card bg-white shadow-sm border border-slate-200 p-6">
+        <div class="text-3xl mb-3" style="color:var(--rg-gold)"><i class="fa-solid fa-globe"></i></div>
+        <h5 class="font-display font-semibold text-lg text-slate-900">NRI Property Buying</h5>
+        <p class="text-sm text-slate-600 mt-2">Living outside India? We handle virtual tours, documents, and builder follow-up right up to possession.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FAQ ═══════════════════════════════════════════════════════════════ -->
-<section id="faq" class="faq-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="text-center mb-5">
-          <span class="section-label">Common Questions</span>
-          <h2 class="section-title">Got a Question? We Have an Answer.</h2>
+<section id="faq" class="bg-white text-slate-800 py-20 md:py-24">
+  <div class="max-w-3xl mx-auto px-4 md:px-8">
+    <div class="text-center mb-12">
+      <span class="font-semibold tracking-widest text-xs uppercase" style="color:var(--rg-gold)">Common Questions</span>
+      <h2 class="font-display font-bold text-3xl md:text-4xl mt-2 text-slate-900">Got a Question? We Have an Answer.</h2>
+    </div>
+
+    <div class="join join-vertical w-full gap-3">
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" checked />
+        <div class="collapse-title font-display font-semibold text-slate-900">Do you charge brokerage from the buyer?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          For all Omaxe new bookings, we do not charge brokerage from the buyer. We are the authorized dealer, so our fee is paid by Omaxe. For resale deals, our fee is discussed openly before you commit &mdash; no hidden charges, ever.
         </div>
-        <div class="accordion" id="faqAccordion">
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                Do you charge brokerage from the buyer?
-              </button>
-            </h3>
-            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                For all Omaxe new bookings, we do not charge brokerage from the buyer.
-                We are the authorized dealer, so our fee is paid by Omaxe.
-                For resale deals, our fee is discussed openly before you commit &mdash; no hidden charges, ever.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                Are these projects RERA registered? Is my money safe?
-              </button>
-            </h3>
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes. All three projects &mdash; Omaxe Royal Nest, World Street, and Omaxe Chowk &mdash;
-                are registered under Punjab RERA. This means the builder must deliver on time or pay you interest.
-                Your advance is also held in an escrow account, not spent freely by the builder.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                Can I get a home loan for these properties?
-              </button>
-            </h3>
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes. Omaxe projects are approved by HDFC, SBI, and other major banks.
-                We are an HDFC-approved Business Sourcing Associate and can help you get your loan
-                approved quickly as part of our service &mdash; at no extra cost to you.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                I live abroad (NRI). Can I still buy through you?
-              </button>
-            </h3>
-            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Absolutely. Many of our clients are NRIs based in Canada, the UK, and the Gulf.
-                We do video call walkthroughs, help with Power of Attorney if needed, and coordinate
-                everything on the ground. You do not need to travel to India just to book a property.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                How does the 12% return at Omaxe Chowk work?
-              </button>
-            </h3>
-            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Omaxe Chowk is a mixed-use commercial project at Ghumar Mandi, Ludhiana — one of the city's
-                busiest intersections with 50,000+ projected weekend footfall. The entertainment-led HopUp
-                units start at &#8377;92 Lakh and carry a 12% annual loyalty return during the fitout period.
-                After delivery (June 2030 as per RERA), you earn lease rental from tenants.
-                WhatsApp us for the current scheme circular and unit availability.
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                What is the NH-152 residential project?
-              </button>
-            </h3>
-            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                This is a premium high-rise residential launch on the Ambala-Chandigarh Expressway (NH-152),
-                right next to MM Hospital and Omaxe Greens. It offers 3 BHK (1,800 sq ft) and 4 BHK (2,300 sq ft)
-                apartments in an S+14 tower, built using Mivan technology.
-                It is currently at pre-launch stage — early booking starts at &#8377;11 Lakh for 3 BHK.
-                Bank loans are available. RERA registration is in progress.
-                Call or WhatsApp us for full details and to block a unit.
-              </div>
-            </div>
-          </div>
-
+      </div>
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" />
+        <div class="collapse-title font-display font-semibold text-slate-900">Are these projects RERA registered? Is my money safe?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          Yes. All projects &mdash; Omaxe Royal Nest, World Street, and Omaxe Chowk &mdash; are registered under Punjab RERA. The builder must deliver on time or pay you interest, and your advance is held in an escrow account, not spent freely.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" />
+        <div class="collapse-title font-display font-semibold text-slate-900">Can I get a home loan for these properties?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          Yes. Omaxe projects are approved by HDFC, SBI, and other major banks. We are an HDFC-approved Business Sourcing Associate and can help you get your loan approved quickly, at no extra cost to you.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" />
+        <div class="collapse-title font-display font-semibold text-slate-900">I live abroad (NRI). Can I still buy through you?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          Absolutely. Many of our clients are NRIs based in Canada, the UK, and the Gulf. We do video call walkthroughs, help with Power of Attorney if needed, and coordinate everything on the ground.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" />
+        <div class="collapse-title font-display font-semibold text-slate-900">How does the 12% return at Omaxe Chowk work?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          Omaxe Chowk is a mixed-use commercial project at Ghumar Mandi, Ludhiana — one of the city's busiest intersections with 50,000+ projected weekend footfall. HopUp units start at &#8377;92 Lakh and carry a 12% annual loyalty return during fitout. After delivery (June 2030 as per RERA), you earn lease rental. WhatsApp us for the current scheme circular.
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-slate-50 border border-slate-200 rounded-xl">
+        <input type="checkbox" />
+        <div class="collapse-title font-display font-semibold text-slate-900">What is the NH-152 residential project?</div>
+        <div class="collapse-content text-sm text-slate-600">
+          A premium high-rise residential launch on the Ambala-Chandigarh Expressway (NH-152), next to MM Hospital and Omaxe Greens. 3 BHK (1,800 sq ft) and 4 BHK (2,300 sq ft) apartments in an S+14 tower, Mivan construction. Pre-launch stage — RERA registration in progress. Call or WhatsApp for full details.
         </div>
       </div>
     </div>
@@ -633,83 +451,83 @@
 </section>
 
 <!-- ═══ CONTACT ═══════════════════════════════════════════════════════════ -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <div class="row gy-5 align-items-center">
-      <div class="col-lg-6">
-        <span class="section-label light">Talk to Us</span>
-        <h2 class="section-title text-white">Ready to Invest?<br>Let&rsquo;s Talk.</h2>
-        <p class="contact-sub mt-3">
+<section id="contact" class="bg-neutral text-neutral-content py-20 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="text-primary font-semibold tracking-widest text-xs uppercase">Talk to Us</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl mt-2">Ready to Invest?<br>Let&rsquo;s Talk.</h2>
+        <p class="mt-4 text-neutral-content/75 max-w-md">
           Send us a message on WhatsApp or fill the form. We will call you back the same day.
           No spam, no pressure &mdash; just a simple conversation about what you are looking for.
         </p>
-        <div class="contact-links mt-4">
+        <div class="mt-8 space-y-4">
           <a href="https://wa.me/917082910021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
-             class="contact-link-item" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <div>
-              <div class="contact-link-label">WhatsApp (Fastest)</div>
-              <div class="contact-link-val">+91 70829 10021</div>
-            </div>
+             target="_blank" rel="noopener" class="flex items-center gap-4 group">
+            <span class="btn btn-circle bg-[#25D366] border-none text-white text-lg"><i class="fa-brands fa-whatsapp"></i></span>
+            <span>
+              <span class="block text-xs text-neutral-content/60">WhatsApp (Fastest)</span>
+              <span class="block font-semibold group-hover:text-primary">+91 70829 10021</span>
+            </span>
           </a>
-          <a href="tel:+917082910021" class="contact-link-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <div class="contact-link-label">Call Us</div>
-              <div class="contact-link-val">+91 70829 10021 &nbsp;&middot;&nbsp; 10 AM &ndash; 7 PM</div>
-            </div>
+          <a href="tel:+917082910021" class="flex items-center gap-4 group">
+            <span class="btn btn-circle btn-outline border-neutral-content/30 text-neutral-content text-lg"><i class="fa-solid fa-phone"></i></span>
+            <span>
+              <span class="block text-xs text-neutral-content/60">Call Us</span>
+              <span class="block font-semibold group-hover:text-primary">+91 70829 10021 &middot; 10 AM&ndash;7 PM</span>
+            </span>
           </a>
-          <a href="mailto:office.realguruinc@gmail.com" class="contact-link-item">
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-              <div class="contact-link-label">Email</div>
-              <div class="contact-link-val">office.realguruinc@gmail.com</div>
-            </div>
+          <a href="mailto:office.realguruinc@gmail.com" class="flex items-center gap-4 group">
+            <span class="btn btn-circle btn-outline border-neutral-content/30 text-neutral-content text-lg"><i class="fa-solid fa-envelope"></i></span>
+            <span>
+              <span class="block text-xs text-neutral-content/60">Email</span>
+              <span class="block font-semibold group-hover:text-primary">office.realguruinc@gmail.com</span>
+            </span>
           </a>
-          <div class="contact-link-item no-link">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <div class="contact-link-label">Office</div>
-              <div class="contact-link-val">101, GT-3, Omaxe Greens, Chandigarh Road, Ambala City</div>
-            </div>
+          <div class="flex items-center gap-4">
+            <span class="btn btn-circle btn-outline border-neutral-content/30 text-neutral-content text-lg"><i class="fa-solid fa-location-dot"></i></span>
+            <span>
+              <span class="block text-xs text-neutral-content/60">Office</span>
+              <span class="block font-semibold">101, GT-3, Omaxe Greens, Chandigarh Road, Ambala City</span>
+            </span>
           </div>
         </div>
       </div>
-      <div class="col-lg-5 offset-lg-1">
-        <div class="contact-card">
-          <h4>Send an Enquiry</h4>
-          <p class="text-muted mb-4" style="font-size:0.88rem;">We will call you back within a few hours.</p>
+
+      <div class="card bg-white text-slate-800 shadow-2xl">
+        <div class="card-body">
+          <h4 class="font-display font-bold text-xl text-slate-900">Send an Enquiry</h4>
+          <p class="text-xs text-slate-500 mb-2">We will call you back within a few hours.</p>
           <!-- Sign up at formspree.io, create a form, and replace REPLACE_WITH_FORMSPREE_ID below -->
-          <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST">
-            <div class="mb-3">
-              <label class="form-label" for="cf-name">Your Name</label>
-              <input type="text" id="cf-name" name="name" class="form-control"
-                     placeholder="Full Name" required>
+          <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" class="space-y-3">
+            <div class="form-control">
+              <label class="label py-1" for="cf-name"><span class="label-text text-xs text-slate-500">Your Name</span></label>
+              <input type="text" id="cf-name" name="name" class="input input-bordered w-full bg-white text-slate-900 placeholder:text-slate-400" placeholder="Full Name" required>
             </div>
-            <div class="mb-3">
-              <label class="form-label" for="cf-phone">Phone Number</label>
-              <input type="tel" id="cf-phone" name="phone" class="form-control"
+            <div class="form-control">
+              <label class="label py-1" for="cf-phone"><span class="label-text text-xs text-slate-500">Phone Number</span></label>
+              <input type="tel" id="cf-phone" name="phone" class="input input-bordered w-full bg-white text-slate-900 placeholder:text-slate-400"
                      placeholder="10-digit mobile" pattern="[0-9]{10}"
                      inputmode="numeric" maxlength="10" required
                      oninput="this.value=this.value.replace(/\D/g,'').slice(0,10)">
             </div>
-            <div class="mb-3">
-              <label class="form-label" for="cf-project">I Am Interested In</label>
-              <select id="cf-project" name="project" class="form-select" required>
+            <div class="form-control">
+              <label class="label py-1" for="cf-project"><span class="label-text text-xs text-slate-500">I Am Interested In</span></label>
+              <select id="cf-project" name="project" class="select select-bordered w-full bg-white text-slate-900" required>
                 <option value="">— Choose a project —</option>
                 <option>Omaxe Royal Nest (Plots, Ludhiana)</option>
                 <option>Omaxe World Street West Zone (New Chandigarh)</option>
                 <option>Omaxe Chowk (Ludhiana)</option>
+                <option>Premium Residences — NH-152</option>
                 <option>General Enquiry</option>
               </select>
             </div>
-            <div class="mb-3">
-              <label class="form-label" for="cf-msg">Message (Optional)</label>
-              <textarea id="cf-msg" name="message" class="form-control" rows="3"
-                        placeholder="What would you like to know?"></textarea>
+            <div class="form-control">
+              <label class="label py-1" for="cf-msg"><span class="label-text text-xs text-slate-500">Message (Optional)</span></label>
+              <textarea id="cf-msg" name="message" class="textarea textarea-bordered w-full bg-white text-slate-900 placeholder:text-slate-400" rows="3" placeholder="What would you like to know?"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary-rg w-100">
-              <i class="fa-solid fa-paper-plane me-2"></i>Send Enquiry
+            <button type="submit" class="btn w-full rounded-full border-none text-black hover:opacity-90" style="background:var(--rg-gold)">
+              <i class="fa-solid fa-paper-plane"></i> Send Enquiry
             </button>
           </form>
         </div>
@@ -719,57 +537,54 @@
 </section>
 
 <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="row gy-4">
-      <div class="col-lg-4 col-md-6">
-        <img src="assets/logo-real-guru.png" alt="Real Guru Inc" class="rg-logo mb-3">
-        <p>Your authorized Omaxe dealer in North India. Helping families and investors make smart property decisions since 2010.</p>
-        <p class="mb-1"><small><i class="fa-solid fa-user me-2"></i>MD: Mr. Mahesh Goyal</small></p>
-        <p class="mb-0"><small><i class="fa-solid fa-file-invoice me-2"></i>GSTIN: 06AFHPG6040C2ZZ</small></p>
+<footer class="bg-neutral text-neutral-content">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 py-14">
+    <div class="grid md:grid-cols-4 gap-10">
+      <div class="md:col-span-1">
+        <a href="#hero" class="brand-wordmark text-2xl text-primary">REAL GURU</a>
+        <p class="text-sm text-neutral-content/70 mt-3">Your authorized Omaxe dealer in North India. Helping families and investors make smart property decisions since 2010.</p>
+        <p class="text-xs text-neutral-content/60 mt-3"><i class="fa-solid fa-user mr-2"></i>MD: Mr. Mahesh Goyal</p>
+        <p class="text-xs text-neutral-content/60"><i class="fa-solid fa-file-invoice mr-2"></i>GSTIN: 06AFHPG6040C2ZZ</p>
       </div>
-      <div class="col-lg-2 col-md-6">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Contact</a></li>
+      <div>
+        <h5 class="font-display font-semibold mb-3">Quick Links</h5>
+        <ul class="space-y-1.5 text-sm text-neutral-content/70">
+          <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+          <li><a href="#about" class="hover:text-primary">About Us</a></li>
+          <li><a href="#services" class="hover:text-primary">Our Services</a></li>
+          <li><a href="#faq" class="hover:text-primary">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-primary">Contact</a></li>
         </ul>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <h5>Our Projects</h5>
-        <ul>
-          <li><a href="#projects">Omaxe Royal Nest &mdash; Ludhiana</a></li>
-          <li><a href="#projects">Omaxe World Street &mdash; New Chandigarh</a></li>
-          <li><a href="#projects">Omaxe Chowk &mdash; Ludhiana</a></li>
+      <div>
+        <h5 class="font-display font-semibold mb-3">Our Projects</h5>
+        <ul class="space-y-1.5 text-sm text-neutral-content/70">
+          <li><a href="#projects" class="hover:text-primary">Omaxe Royal Nest &mdash; Ludhiana</a></li>
+          <li><a href="#projects" class="hover:text-primary">Omaxe World Street &mdash; New Chandigarh</a></li>
+          <li><a href="#projects" class="hover:text-primary">Omaxe Chowk &mdash; Ludhiana</a></li>
+          <li><a href="#projects" class="hover:text-primary">Premium Residences &mdash; NH-152</a></li>
         </ul>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <h5>Contact</h5>
-        <address style="font-style:normal;">
-          <p class="mb-2">101, GT-3, Omaxe Greens, Chandigarh Road,<br>Ambala City &mdash; 134007, Haryana</p>
-          <p class="mb-2"><a href="tel:+917082910021">+91 70829 10021</a></p>
-          <p class="mb-2"><a href="mailto:office.realguruinc@gmail.com">office.realguruinc@gmail.com</a></p>
+      <div>
+        <h5 class="font-display font-semibold mb-3">Contact</h5>
+        <address class="not-italic text-sm text-neutral-content/70 space-y-1.5">
+          <p>101, GT-3, Omaxe Greens, Chandigarh Road,<br>Ambala City &mdash; 134007, Haryana</p>
+          <p><a href="tel:+917082910021" class="hover:text-primary">+91 70829 10021</a></p>
+          <p><a href="mailto:office.realguruinc@gmail.com" class="hover:text-primary">office.realguruinc@gmail.com</a></p>
         </address>
-        <div class="d-flex gap-3 mt-1">
-          <a href="https://wa.me/917082910021" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp fa-lg"></i>
-          </a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook fa-lg"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram fa-lg"></i></a>
+        <div class="flex gap-4 mt-3 text-lg">
+          <a href="https://wa.me/917082910021" target="_blank" rel="noopener" aria-label="WhatsApp" class="hover:text-primary"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook" class="hover:text-primary"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram" class="hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="mb-0">
-        &copy; 2026 Real Guru Inc. All Rights Reserved.
-        &nbsp;&middot;&nbsp;
-        <a href="https://rera.punjab.gov.in" target="_blank" rel="noopener">Punjab RERA</a>
-        &nbsp;&middot;&nbsp;
-        <a href="https://www.omaxe.com" target="_blank" rel="noopener">Omaxe Ltd.</a>
-      </p>
+    <div class="border-t border-neutral-content/10 mt-10 pt-6 text-center text-xs text-neutral-content/50">
+      &copy; 2026 Real Guru Inc. All Rights Reserved.
+      &nbsp;&middot;&nbsp;
+      <a href="https://rera.punjab.gov.in" target="_blank" rel="noopener" class="hover:text-primary">Punjab RERA</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.omaxe.com" target="_blank" rel="noopener" class="hover:text-primary">Omaxe Ltd.</a>
     </div>
   </div>
 </footer>
@@ -780,6 +595,5 @@
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
