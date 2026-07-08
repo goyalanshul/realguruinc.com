@@ -53,7 +53,7 @@
   </script>
 </head>
 
-<body class="bg-base-100 text-base-content">
+<body class="bg-base-100 text-base-content pb-16 lg:pb-0">
 
 <!-- ═══ NAVBAR ═══════════════════════════════════════════════════════════ -->
 <div class="navbar bg-neutral text-neutral-content sticky top-0 z-40 px-4 md:px-8 shadow-lg shadow-black/30">
@@ -589,11 +589,24 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
+<!-- FLOATING WHATSAPP BUTTON (desktop/tablet only — mobile uses the sticky bar below) -->
 <a href="https://wa.me/918683800021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
-   class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+   class="wa-float hidden lg:flex" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="lg:hidden fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 shadow-[0_-4px_20px_rgba(0,0,0,0.3)]">
+  <a href="tel:+918683800021"
+     class="flex items-center justify-center gap-2 py-3.5 bg-neutral text-neutral-content font-semibold text-sm">
+    <i class="fa-solid fa-phone"></i> Call Now
+  </a>
+  <a href="https://wa.me/918683800021?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Omaxe%20projects."
+     target="_blank" rel="noopener"
+     class="flex items-center justify-center gap-2 py-3.5 bg-[#25D366] text-white font-semibold text-sm">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+  </a>
+</div>
 
 </body>
 </html>
