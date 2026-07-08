@@ -187,6 +187,7 @@ img { max-width: 100%; height: auto; }
   position: absolute;
   top: 12px;
   left: 12px;
+  z-index: 2;
   background: var(--rg-primary);
   color: #fff;
   font-size: 0.7rem;
@@ -199,6 +200,33 @@ img { max-width: 100%; height: auto; }
 .project-type-badge.commercial  { background: #0369a1; }
 .project-type-badge.investment  { background: #6d28d9; }
 .project-type-badge.prelaunched { background: #b45309; }
+
+/* Project gallery carousel (Bootstrap) inside a brochure card */
+.brochure-img-wrap .carousel-control-prev,
+.brochure-img-wrap .carousel-control-next {
+  width: 15%;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.brochure-img-wrap:hover .carousel-control-prev,
+.brochure-img-wrap:hover .carousel-control-next { opacity: 0.8; }
+.brochure-img-wrap .carousel-control-prev-icon,
+.brochure-img-wrap .carousel-control-next-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-size: 1.4rem;
+}
+.rg-carousel-indicators { margin-bottom: 0.5rem; }
+.rg-carousel-indicators [data-bs-target] {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.55;
+  border: none;
+  margin: 0 3px;
+}
+.rg-carousel-indicators [data-bs-target].active { opacity: 1; }
 
 .project-img-placeholder {
   display: flex;
