@@ -498,8 +498,13 @@
         <div class="card-body">
           <h4 class="font-display font-bold text-xl text-slate-900">Send an Enquiry</h4>
           <p class="text-xs text-slate-500 mb-2">We will call you back within a few hours.</p>
-          <!-- Sign up at formspree.io, create a form, and replace REPLACE_WITH_FORMSPREE_ID below -->
-          <form action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID" method="POST" class="space-y-3">
+          <!-- Submits via FormSubmit.co (no account needed) to enquiry@realguruinc.com. -->
+          <!-- IMPORTANT: the first-ever submission triggers a one-time "Activate Form" email to that inbox — someone must click it or later submissions will be silently dropped. -->
+          <form id="enquiry-form" action="https://formsubmit.co/enquiry@realguruinc.com" method="POST" class="space-y-3">
+            <input type="hidden" name="_subject" value="New Website Enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-control">
               <label class="label py-1" for="cf-name"><span class="label-text text-xs text-slate-500">Your Name</span></label>
               <input type="text" id="cf-name" name="name" class="input input-bordered w-full bg-white text-slate-900 placeholder:text-slate-400" placeholder="Full Name" required>
@@ -526,7 +531,8 @@
               <label class="label py-1" for="cf-msg"><span class="label-text text-xs text-slate-500">Message (Optional)</span></label>
               <textarea id="cf-msg" name="message" class="textarea textarea-bordered w-full bg-white text-slate-900 placeholder:text-slate-400" rows="3" placeholder="What would you like to know?"></textarea>
             </div>
-            <button type="submit" class="btn w-full rounded-full border-none text-black hover:opacity-90" style="background:var(--rg-gold)">
+            <div id="enquiry-status" class="alert text-sm hidden" role="status"></div>
+            <button type="submit" id="enquiry-submit" class="btn w-full rounded-full border-none text-black hover:opacity-90" style="background:var(--rg-gold)">
               <i class="fa-solid fa-paper-plane"></i> Send Enquiry
             </button>
           </form>
@@ -607,6 +613,48 @@
     <i class="fa-brands fa-whatsapp"></i> WhatsApp
   </a>
 </div>
+
+<script>
+(function () {
+  var form = document.getElementById('enquiry-form');
+  if (!form) return;
+  var status = document.getElementById('enquiry-status');
+  var submitBtn = document.getElementById('enquiry-submit');
+  var honey = form.querySelector('[name="_honey"]');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (honey.value) return; // bot filled the hidden field
+
+    form._subject.value = 'Website Enquiry: ' + form.name.value.trim() + ' — ' + form.project.value;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch('https://formsubmit.co/ajax/enquiry@realguruinc.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.ok ? res.json() : Promise.reject(res); })
+      .then(function () {
+        status.className = 'alert alert-success text-sm';
+        status.textContent = 'Thank you! We have received your enquiry and will call you back shortly.';
+        status.classList.remove('hidden');
+        form.reset();
+      })
+      .catch(function () {
+        status.className = 'alert alert-error text-sm';
+        status.innerHTML = 'Something went wrong. Please WhatsApp us instead: <a href="https://wa.me/918683800021" class="link" target="_blank" rel="noopener">Chat on WhatsApp</a>';
+        status.classList.remove('hidden');
+      })
+      .finally(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Enquiry';
+      });
+  });
+})();
+</script>
 
 </body>
 </html>
